@@ -9,7 +9,7 @@ frm.addEventListener('submit',(e)=>{
     e.preventDefault();
     rslt1.textContent='Loading...';
     rslt2.textContent='';
-    fetch('http://localhost:3000/weather?search=' + srch.value).then((response)=>{
+    fetch('/weather?search=' + srch.value).then((response)=>{
         response.json().then((data)=>{
            if(data.error)
            {
